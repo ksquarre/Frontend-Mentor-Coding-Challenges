@@ -1,0 +1,141 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  max-width: 100%;
+  font-family: "Montserrat", sans-serif;
+  font-size: 15px;
+  background-color: hsl(240, 78%, 98%);
+  background-image: url(./images/bg-top.svg), url(./images/bg-bottom.svg);
+  background-position: top right, bottom left;
+  background-repeat: no-repeat, no-repeat;
+}
+.wrap {
+  margin-top: 2em;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#toggle {
+  display: inline-block;
+  width: 45px;
+  border-radius: 20px;
+  height: 20px;
+  background: linear-gradient(hsl(236, 72%, 82%), hsl(237, 63%, 75%));
+  padding: 1px;
+  position: relative;
+  vertical-align: bottom;
+  margin: 0 10px;
+}
+
+#btn {
+  transition: all 0.1s;
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  height: 16px;
+  width: 16px;
+  border-radius: 50%;
+  border: 0;
+  background-color: white;
+  cursor: pointer;
+  box-shadow: 0 0 2px 0;
+}
+.cls1 {
+  transform: translateX(25px);
+}
+.cls2 {
+  transform: translateX(0);
+}
+h2 {
+  font-size: 24px;
+  color: hsl(233, 13%, 49%);
+  font-weight: 900;
+  margin: 1em 0;
+}
+
+.flex {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 1em 0;
+}
+.box {
+  width: 25%;
+  min-width: 275px;
+  height: 400px;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+  text-align: center;
+  transition: all 0.5s;
+  margin: 0 10px;
+}
+.box h1,
+h4,
+p {
+  text-align: center;
+  padding: 18px 4px;
+}
+
+.box p {
+  display: inline-block;
+  width: 80%;
+  border-bottom: 1px solid hsl(234, 14%, 74%);
+}
+.f {
+  border-top: 1px solid hsl(234, 14%, 74%);
+}
+.b2 {
+  display: none;
+}
+.b1 {
+  display: block;
+}
+.box button {
+  width: 90%;
+  min-width: 110px;
+  margin: 20px 10px;
+
+  font-size: 16px;
+  border-radius: 10px;
+  color: hsl(237, 63%, 64%);
+  border: 1px solid hsl(237, 63%, 64%);
+  background-color: white;
+  letter-spacing: 2px;
+  padding: 1em 0;
+}
+
+.box:focus,
+.box:hover {
+  background: linear-gradient(hsl(236, 72%, 82%), hsl(237, 63%, 64%));
+  transform: scale(1.1);
+}
+.box:hover p {
+  border-color: white;
+}
+@media screen and (max-width: 900px) {
+  .flex {
+    flex-direction: column;
+  }
+  .box {
+    width: 374px;
+    min-width: 275px;
+    margin: 10px 0;
+  }
+}
+@media screen and (max-width: 440px) {
+  .box {
+    width: 275px;
+    min-width: 200px;
+  }
+}
